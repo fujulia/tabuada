@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <script>
+
+        function conta() {
+            const num = document.getElementById('num').value;
+            document.getElementById("resultado").innerHTML = '';
+            for (let index = 1; index <= 10; index++) {
+                const multi = num * index;
+                document.getElementById("resultado").innerHTML += `${index} x ${num} = ${multi}<br>`;
+            }
+        }
+
+    </script>
+    <style>
+        section{
+            width: 400px;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <form>
+            <label for="">Insira um número:</label>
+            <input type="number" name="num" id="num" oninput="conta()" value="0">
+        </form>
+        <div id="resultado">
+
+        </div>
+    </section>
+</body>
+
+</html>
